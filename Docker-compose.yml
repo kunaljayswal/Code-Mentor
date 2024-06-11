@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./code editor UI/openai-python-backend
+    ports:
+      - "80:80"
+
+  frontend:
+    build:
+      context: ./code editor UI
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

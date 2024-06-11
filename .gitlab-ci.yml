@@ -1,0 +1,26 @@
+stages:
+    - "build"
+    - "test"
+    - "deploy"
+
+# default image of the YAML: If you have not specify the "image" argument inside the job,
+# then this image will be used
+image: python:latest 
+
+job1:
+    stage: "build"
+    script:
+        - "echo Building stage started"
+        - "echo I am building the docker image!"
+
+
+job2:
+    stage: "test"
+    script:
+        - "echo Test stage started"
+
+
+job3:
+    stage: "deploy"
+    script:
+        - "echo Deploy started"
